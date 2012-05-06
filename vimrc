@@ -321,3 +321,11 @@ let g:tagbar_autofocus = 1
 
 " --- PowerLine
 " let g:Powerline_symbols = 'fancy' " require fontpatcher
+
+let $LANG="zh_TW.UTF-8"
+set langmenu=zh_tw.utf-8
+set encoding=utf8
+
+"reload menu with UTF-8 encoding
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
