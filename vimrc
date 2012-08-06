@@ -12,17 +12,18 @@ if !has('gui_running')
    call add(g:pathogen_disabled, 'powerline')
 endif
 
+filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
 " General Settings
-
 set nocompatible	" not compatible with the old-fashion vi mode
 set bs=2		" allow backspacing over everything in insert mode
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set autoread		" auto read when file is changed from outside
-
+set nu                  " show line number
+set dir=$TEMP
 
 filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
@@ -31,7 +32,6 @@ filetype plugin on    " Enable filetype-specific plugins
 
 " auto reload vimrc when editing it
 autocmd! bufwritepost .vimrc source ~/.vimrc
-
 
 syntax on		" syntax highlight
 set hlsearch		" search highlighting
@@ -73,8 +73,8 @@ set tm=500
 
 " TAB setting{
    set expandtab        "replace <TAB> with spaces
-   set softtabstop=3 
-   set shiftwidth=3 
+   set softtabstop=4
+   set shiftwidth=4 
 
    au FileType Makefile set noexpandtab
 "}      							
@@ -322,10 +322,12 @@ let g:tagbar_autofocus = 1
 " --- PowerLine
 " let g:Powerline_symbols = 'fancy' " require fontpatcher
 
-let $LANG="zh_TW.UTF-8"
-set langmenu=zh_tw.utf-8
+let $LANG="en_US.UTF-8"
+set langmenu=en_US.utf-8
 set encoding=utf8
 
 "reload menu with UTF-8 encoding
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
+cd E:\Software\Dropbox
+
